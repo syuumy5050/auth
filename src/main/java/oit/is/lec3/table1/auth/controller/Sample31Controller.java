@@ -19,5 +19,10 @@ public class Sample31Controller {
         return "sample31.html";
     }
 
-
+    @GetMapping("step2")
+    public String sample32(ModelMap model, Principal prin) {
+      String loginUser = prin.getName(); // ログインユーザ情報
+      model.addAttribute("login_user", loginUser);
+      return "sample31.html";
+    }
 }
